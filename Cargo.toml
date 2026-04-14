@@ -1,0 +1,24 @@
+[package]
+name = "barco-pulse-rs"
+version = "0.1.0"
+edition = "2024"
+license = "MPL-2.0"
+description = "Rust client for Barco Pulse projector JSON-RPC API"
+repository = "https://github.com/efstratios97/barco-pulse-rs"
+readme = "README.md"
+keywords = ["barco", "projector", "jsonrpc", "pulse"]
+categories = ["api-bindings", "network-programming"]
+
+[dependencies]
+serde_json = "1.0.149"
+#jsonrpsee = { features = ["http-client"], version = "0.26.0" }
+serde = { version = "1", features = ["derive"] }
+tokio = { version = "1.50.0", features = ["full"] }
+bon = "3.9.1"
+getset = "0.1.6"
+reqwest = "0.13.2"
+serde_yaml = "0.9.34+deprecated"
+
+[build-dependencies]
+serde_json = "1.0.149"
+serde = { version = "1", features = ["derive"] }
