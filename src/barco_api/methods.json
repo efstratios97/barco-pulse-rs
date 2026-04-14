@@ -1,0 +1,2689 @@
+[
+	{
+		"method": "authenticate",
+		"description": "[DEPRECATED] Authenticate using pin code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "authenticate",
+			"params": {
+				"code": "<int>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "generatenewtoken",
+		"description": "Request a new token for the currently authenticated user",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "generatenewtoken",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "getchallenge",
+		"description": "Get the challenge for key-based authentication",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "getchallenge",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "introspect",
+		"description": "Introspect the API for a specified object path",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "introspect",
+			"params": {
+				"object": "<string>",
+				"recursive": "<bool>",
+				"descriptions": "<bool>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "login",
+		"description": "Login using username and signed challenge (set token true to receive a token)",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "login",
+			"params": {
+				"username": "<string>",
+				"signature": "<string>",
+				"token": "<bool>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "logout",
+		"description": "De-authenticate",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "logout",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "dmx.listchannels",
+		"description": "Return a list of available channel names",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "dmx.listchannels",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "dmx.listmodes",
+		"description": "Return a list of all modes",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "dmx.listmodes",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "environment.getalarminfo",
+		"description": "Description not provided",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "environment.getalarminfo",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "environment.getcontrolblocks",
+		"description": "Description not provided",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "environment.getcontrolblocks",
+			"params": {
+				"type": "<enum>",
+				"valuetype": "<enum>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "gpio.gpo.trigger1.listavailablemodes",
+		"description": "List of possible GPO modes.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "gpio.gpo.trigger1.listavailablemodes",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "gpio.gpo.trigger1.pulse",
+		"description": "Single toggle value of output",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "gpio.gpo.trigger1.pulse",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "gpio.gpo.trigger2.listavailablemodes",
+		"description": "List of possible GPO modes.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "gpio.gpo.trigger2.listavailablemodes",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "gpio.gpo.trigger2.pulse",
+		"description": "Single toggle value of output",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "gpio.gpo.trigger2.pulse",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "gpio.listinputs",
+		"description": "List the names of all General Purpose Inputs",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "gpio.listinputs",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "gpio.listoutputs",
+		"description": "List the names of all General Purpose Outputs",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "gpio.listoutputs",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "illumination.clo.engage",
+		"description": "Engage CLO at the current light level",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "illumination.clo.engage",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.brilliantcolor.list",
+		"description": "List possible BrilliantColor modes.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.brilliantcolor.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.color.p7.custom.copypresettocustom",
+		"description": "Description not provided",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.color.p7.custom.copypresettocustom",
+			"params": {
+				"presetname": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.color.p7.custom.makebalanced",
+		"description": "Create a balanced colorspace from the current primaries",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.color.p7.custom.makebalanced",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.color.p7.custom.resetpreset",
+		"description": "Reset preset back to its default values",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.color.p7.custom.resetpreset",
+			"params": {
+				"presetname": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.color.p7.custom.resettonative",
+		"description": "Description not provided",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.color.p7.custom.resettonative",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.color.rgbmode.nextrgbmode",
+		"description": "Change to the next RGB mode. Lets you cycle through all possible modes.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.color.rgbmode.nextrgbmode",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.connector.displayport.edid.list",
+		"description": "List system EDIDs available for this connector",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.connector.displayport.edid.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.connector.hdmi.edid.list",
+		"description": "List system EDIDs available for this connector",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.connector.hdmi.edid.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.connector.list",
+		"description": "Description not provided",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.connector.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.display.listdisplaymodes",
+		"description": "List possible display modes.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.display.listdisplaymodes",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.list",
+		"description": "List all available orientation modes",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.listgammatypes",
+		"description": "List all available gamma types.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.listgammatypes",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.blacklevel.basicblacklevel.getblacklevelarea",
+		"description": "Returns the four boxes describing the black level edges.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.blacklevel.basicblacklevel.getblacklevelarea",
+			"params": {
+				"resolution_width": "<object>",
+				"resolution_height": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.blacklevel.basicblacklevel.getwarpedblacklevelarea",
+		"description": "Returns the four boxes describing the black level edges, after warp.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.blacklevel.basicblacklevel.getwarpedblacklevelarea",
+			"params": {
+				"resolution_width": "<object>",
+				"resolution_height": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.blacklevel.file.delete",
+		"description": "Deletes afile with the given name.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.blacklevel.file.delete",
+			"params": {
+				"filename": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.blacklevel.file.list",
+		"description": "Returns a list of available black level correctionfiles",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.blacklevel.file.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.blend.basicblend.getblendarea",
+		"description": "Returns the four boxes describing the blend edges.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.blend.basicblend.getblendarea",
+			"params": {
+				"resolution_width": "<object>",
+				"resolution_height": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.blend.basicblend.getwarpedblendarea",
+		"description": "Returns the four boxes describing the blend edges, after warp.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.blend.basicblend.getwarpedblendarea",
+			"params": {
+				"resolution_width": "<object>",
+				"resolution_height": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.blend.file.delete",
+		"description": "Deletes afile with the given name.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.blend.file.delete",
+			"params": {
+				"filename": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.blend.file.list",
+		"description": "Returns a list of available blendfiles",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.blend.file.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.warp.file.delete",
+		"description": "Deletes afile with the given name.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.warp.file.delete",
+			"params": {
+				"filename": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.warp.file.list",
+		"description": "Returns a list of available warpfiles",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.warp.file.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.warp.fourcorners.getscaledcorners",
+		"description": "Get the corners scaled to the given resolution",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.warp.fourcorners.getscaledcorners",
+			"params": {
+				"resolution": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.warp.warpscaledpoints",
+		"description": "Takes an array of points and returns their warped equivalents.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.warp.warpscaledpoints",
+			"params": {
+				"points": "[<object>]",
+				"resolution": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.warpgrid.getgrid",
+		"description": "Get the current grid points as normalized and relative",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.warpgrid.getgrid",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.warpgrid.getgridsize",
+		"description": "Description not provided",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.warpgrid.getgridsize",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.processing.warpgrid.getscaledgrid",
+		"description": "Get the current grid scaled to the given resolution",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.processing.warpgrid.getscaledgrid",
+			"params": {
+				"resolution": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.resolution.list",
+		"description": "List all possible resolutions.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.resolution.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.source.displayport.listconnectors",
+		"description": "Get all connectors that are assigned to this source with their layout position",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.source.displayport.listconnectors",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.source.hdmi.listconnectors",
+		"description": "Get all connectors that are assigned to this source with their layout position",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.source.hdmi.listconnectors",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.source.list",
+		"description": "List all available sources",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.source.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.stereo.listdarktime",
+		"description": "List all possible darktime values (in us).",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.stereo.listdarktime",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.file.delete",
+		"description": "Deletes afile with the given name.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.file.delete",
+			"params": {
+				"filename": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.file.list",
+		"description": "Get a list of available custom uploaded patterns",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.file.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.getproperties",
+		"description": "Get the properties of a pattern",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.getproperties",
+			"params": {
+				"id": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.calibration.listpossiblepatterns",
+		"description": "Return the list of possible testpatterns to iterate.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.calibration.listpossiblepatterns",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.calibration.next",
+		"description": "Show the next testpattern in the list.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.calibration.next",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.iris.listpossiblepatterns",
+		"description": "Return the list of possible testpatterns to iterate.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.iris.listpossiblepatterns",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.iris.next",
+		"description": "Show the next testpattern in the list.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.iris.next",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.optics.listpossiblepatterns",
+		"description": "Return the list of possible testpatterns to iterate.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.optics.listpossiblepatterns",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.optics.next",
+		"description": "Show the next testpattern in the list.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.optics.next",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.shift.listpossiblepatterns",
+		"description": "Return the list of possible testpatterns to iterate.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.shift.listpossiblepatterns",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.shift.next",
+		"description": "Show the next testpattern in the list.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.shift.next",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.stereo.listpossiblepatterns",
+		"description": "Return the list of possible testpatterns to iterate.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.stereo.listpossiblepatterns",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.stereo.next",
+		"description": "Show the next testpattern in the list.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.stereo.next",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.xpr.listpossiblepatterns",
+		"description": "Return the list of possible testpatterns to iterate.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.xpr.listpossiblepatterns",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.iterator.xpr.next",
+		"description": "Show the next testpattern in the list.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.iterator.xpr.next",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.list",
+		"description": "Get a list of available patterns",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.listinternal",
+		"description": "Get a list of available internal patterns",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.listinternal",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.nosignal.list",
+		"description": "Get a list of available NoSignal patterns",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.nosignal.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.setproperties",
+		"description": "Set the properties of a pattern",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.setproperties",
+			"params": {
+				"id": "<string>",
+				"properties": "[<object>]",
+				"key": "<string>",
+				"value": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.testpattern.toggle",
+		"description": "Toggle display of selected test pattern on/off",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.testpattern.toggle",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "image.window.list",
+		"description": "List all available windows",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "image.window.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "keydispatcher.postevent",
+		"description": "Create and send a synthetic key event",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "keydispatcher.postevent",
+			"params": {
+				"eventtype": "<enum>",
+				"key": "<enum>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "led.activity",
+		"description": "Activates the LEDS when enabled and restarts the LED timeout counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "led.activity",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "led.list",
+		"description": "Description not provided",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "led.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "led.muteall",
+		"description": "Mutes the LEDS.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "led.muteall",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "lightmeasurement.getlightoutput",
+		"description": "Description not provided",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "lightmeasurement.getlightoutput",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "network.list",
+		"description": "List of logical device id, e.g: 'wired1', 'wifi1'",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "network.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "notification.caution.list",
+		"description": "Retrieve all active notifications for the given severity",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "notification.caution.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "notification.dismiss",
+		"description": "Dismiss the notification with the specified id",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "notification.dismiss",
+			"params": {
+				"id": "<string>",
+				"response": "<enum>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "notification.error.list",
+		"description": "Retrieve all active notifications for the given severity",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "notification.error.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "notification.info.list",
+		"description": "Retrieve all active notifications for the given severity",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "notification.info.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "notification.list",
+		"description": "List all active notifications",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "notification.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "notification.listsuppressed",
+		"description": "Get a list of suppressed notification codes",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "notification.listsuppressed",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "notification.log",
+		"description": "List received notifications",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "notification.log",
+			"params": {
+				"minimumseverity": "<enum>",
+				"start": "<object>",
+				"count": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "notification.suppress",
+		"description": "Add a notification code to suppress (log but do not show on the LCD/OSD)",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "notification.suppress",
+			"params": {
+				"code": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "notification.unsuppress",
+		"description": "No longer suppress a certain notification code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "notification.unsuppress",
+			"params": {
+				"code": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "notification.unsuppressall",
+		"description": "No longer suppress any notification codes",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "notification.unsuppressall",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "notification.warning.list",
+		"description": "Retrieve all active notifications for the given severity",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "notification.warning.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.focus.calibrate",
+		"description": "Calibrate motor",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.focus.calibrate",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.focus.runforward",
+		"description": "Run forward",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.focus.runforward",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.focus.runforwardtime",
+		"description": "Run forward for X milliseconds",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.focus.runforwardtime",
+			"params": {
+				"milliseconds": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.focus.runreverse",
+		"description": "Run reverse",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.focus.runreverse",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.focus.runreversetime",
+		"description": "Run reverse for X milliseconds",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.focus.runreversetime",
+			"params": {
+				"milliseconds": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.focus.stepforward",
+		"description": "Step forward",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.focus.stepforward",
+			"params": {
+				"steps": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.focus.stepreverse",
+		"description": "Step reverse",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.focus.stepreverse",
+			"params": {
+				"steps": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.focus.stop",
+		"description": "Stop",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.focus.stop",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lens.list",
+		"description": "List available lenses",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lens.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.horizontal.calibrate",
+		"description": "Calibrate motor",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.horizontal.calibrate",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.horizontal.runforward",
+		"description": "Run forward",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.horizontal.runforward",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.horizontal.runforwardtime",
+		"description": "Run forward for X milliseconds",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.horizontal.runforwardtime",
+			"params": {
+				"milliseconds": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.horizontal.runreverse",
+		"description": "Run reverse",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.horizontal.runreverse",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.horizontal.runreversetime",
+		"description": "Run reverse for X milliseconds",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.horizontal.runreversetime",
+			"params": {
+				"milliseconds": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.horizontal.stepforward",
+		"description": "Step forward",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.horizontal.stepforward",
+			"params": {
+				"steps": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.horizontal.stepreverse",
+		"description": "Step reverse",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.horizontal.stepreverse",
+			"params": {
+				"steps": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.horizontal.stop",
+		"description": "Stop",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.horizontal.stop",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.vertical.calibrate",
+		"description": "Calibrate motor",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.vertical.calibrate",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.vertical.runforward",
+		"description": "Run forward",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.vertical.runforward",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.vertical.runforwardtime",
+		"description": "Run forward for X milliseconds",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.vertical.runforwardtime",
+			"params": {
+				"milliseconds": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.vertical.runreverse",
+		"description": "Run reverse",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.vertical.runreverse",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.vertical.runreversetime",
+		"description": "Run reverse for X milliseconds",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.vertical.runreversetime",
+			"params": {
+				"milliseconds": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.vertical.stepforward",
+		"description": "Step forward",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.vertical.stepforward",
+			"params": {
+				"steps": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.vertical.stepreverse",
+		"description": "Step reverse",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.vertical.stepreverse",
+			"params": {
+				"steps": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.lensshift.vertical.stop",
+		"description": "Stop",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.lensshift.vertical.stop",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.shifttocenter",
+		"description": "Shift lens to center of allowed shift range",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.shifttocenter",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.shutter.getobjectpath",
+		"description": "Get object path of shutter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.shutter.getobjectpath",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.shutter.getstate",
+		"description": "Get state of shutter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.shutter.getstate",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.shutter.toggle",
+		"description": "Toggle shutter position",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.shutter.toggle",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.zoom.calibrate",
+		"description": "Calibrate motor",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.zoom.calibrate",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.zoom.runforward",
+		"description": "Run forward",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.zoom.runforward",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.zoom.runforwardtime",
+		"description": "Run forward for X milliseconds",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.zoom.runforwardtime",
+			"params": {
+				"milliseconds": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.zoom.runreverse",
+		"description": "Run reverse",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.zoom.runreverse",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.zoom.runreversetime",
+		"description": "Run reverse for X milliseconds",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.zoom.runreversetime",
+			"params": {
+				"milliseconds": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.zoom.stepforward",
+		"description": "Step forward",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.zoom.stepforward",
+			"params": {
+				"steps": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.zoom.stepreverse",
+		"description": "Step reverse",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.zoom.stepreverse",
+			"params": {
+				"steps": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "optics.zoom.stop",
+		"description": "Stop",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "optics.zoom.stop",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "peripheral.autodetect",
+		"description": "Trigger auto detection of connected peripherals.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "peripheral.autodetect",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "peripheral.list",
+		"description": "List alignment tools.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "peripheral.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "profile.activatepreset",
+		"description": "Activate the profile associated with the given preset.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "profile.activatepreset",
+			"params": {
+				"preset": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "profile.activateprofile",
+		"description": "Activate the given profile",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "profile.activateprofile",
+			"params": {
+				"name": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "profile.assignpreset",
+		"description": "Assign a profile to a preset.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "profile.assignpreset",
+			"params": {
+				"preset": "<object>",
+				"profile": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "profile.createprofile",
+		"description": "Create a profile containing the current values of the listed domains.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "profile.createprofile",
+			"params": {
+				"profilename": "<string>",
+				"domains": "[<string>]"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "profile.deleteprofile",
+		"description": "Delete the given profile",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "profile.deleteprofile",
+			"params": {
+				"name": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "profile.getdomainsforprofile",
+		"description": "Get the list of domains stored in a profile.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "profile.getdomainsforprofile",
+			"params": {
+				"name": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "profile.presetforprofile",
+		"description": "Get the preset assignment for given profile. -1 means unassigned.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "profile.presetforprofile",
+			"params": {
+				"name": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "profile.profileforpreset",
+		"description": "Get the profile associated with the given preset assignment. Empty string means unassigned.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "profile.profileforpreset",
+			"params": {
+				"preset": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "remotecontrol.listsensors",
+		"description": "Return a list of all the object names of the IR sensors",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "remotecontrol.listsensors",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "scheduler.create",
+		"description": "Create a new action for scheduler.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "scheduler.create",
+			"params": {
+				"name": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.illumination on uptime.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.illumination on uptime.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.illumination on uptime.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.illumination on uptime.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.laser runtime.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.laser runtime.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.laser runtime.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.laser runtime.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.laser.plate01.bank01.runtimeseconds.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.laser.plate01.bank01.runtimeseconds.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.laser.plate01.bank01.runtimeseconds.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.laser.plate01.bank01.runtimeseconds.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.laser.plate01.bank02.runtimeseconds.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.laser.plate01.bank02.runtimeseconds.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.laser.plate01.bank02.runtimeseconds.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.laser.plate01.bank02.runtimeseconds.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.laser.plate02.bank01.runtimeseconds.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.laser.plate02.bank01.runtimeseconds.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.laser.plate02.bank01.runtimeseconds.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.laser.plate02.bank01.runtimeseconds.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.laser.plate02.bank02.runtimeseconds.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.laser.plate02.bank02.runtimeseconds.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.laser.plate02.bank02.runtimeseconds.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.laser.plate02.bank02.runtimeseconds.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.listcounters",
+		"description": "List all counter names",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.listcounters",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.maintenance.actuator.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.maintenance.actuator.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.maintenance.actuator.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.maintenance.actuator.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.maintenance.colorwheel.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.maintenance.colorwheel.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.maintenance.colorwheel.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.maintenance.colorwheel.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.maintenance.phosphorwheel.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.maintenance.phosphorwheel.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.maintenance.phosphorwheel.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.maintenance.phosphorwheel.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.projector on.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.projector on.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.projector on.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.projector on.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.projector uptime.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.projector uptime.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.projector uptime.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.projector uptime.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.projector.getname",
+		"description": "Name of the counter",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.projector.getname",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "statistics.projector.getunit",
+		"description": "Unit of measurements",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "statistics.projector.getunit",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.activity",
+		"description": "Signal user activity (resets timeout countdown timers)",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.activity",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.boards.getboardlist",
+		"description": "Retrieve list of detected boards",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.boards.getboardlist",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.boards.getmissingboardlist",
+		"description": "Retrieve list of missing boards",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.boards.getmissingboardlist",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.date.getlocaldate",
+		"description": "Returns the system date as local time.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.date.getlocaldate",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.date.getsystemdate",
+		"description": "Returns the system date as UTC time.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.date.getsystemdate",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.getidentifications",
+		"description": "Description not provided",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.getidentifications",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.getsystemdate",
+		"description": "Description not provided",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.getsystemdate",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.gotoeco",
+		"description": "Set the device in the eco state",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.gotoeco",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.gotoready",
+		"description": "Set the device from standby state to ready state",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.gotoready",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.license.file.saveregistrationtousb",
+		"description": "Save registrationfile to usb memory device",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.license.file.saveregistrationtousb",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.license.file.uploadfromusb",
+		"description": "Upload license from usb memory device",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.license.file.uploadfromusb",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.listresetdomains",
+		"description": "Returns the list of available reset domains",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.listresetdomains",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.poweroff",
+		"description": "Power off the unit",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.poweroff",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.poweron",
+		"description": "Power on the unit",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.poweron",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.reset",
+		"description": "",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.reset",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "Asynchronously starts reset of selected domains. The completion of the domains are signalled by one ore more",
+		"description": "'Performed'-signals. Subsequent calls to 'ResetAll' or 'Reset' will fail until all domains have completed.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "Asynchronously starts reset of selected domains. The completion of the domains are signalled by one ore more",
+			"params": {
+				"domains": "[<enum>]"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "system.resetall",
+		"description": "Asynchronously starts reset of all domains. The completion of the domains are signalled by one ore more 'Performed'- signals. Subsequent calls to 'ResetAll' or 'Reset' will fail until all domains have completed. Execute this function with caution, as it might remove the projector's hostname, requiring physical access to the projector.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "system.resetall",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.leds.setstate",
+		"description": "Set the state and color of the key LEDs",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.leds.setstate",
+			"params": {
+				"key": "<enum>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.settings.get",
+		"description": "Get the value of the specified key",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.settings.get",
+			"params": {
+				"key": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.settings.getfonticons",
+		"description": "",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.settings.getfonticons",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "Return a dictionary of icons for the specified category. Then icon is returned as a string containing the font set class",
+		"description": "name and the icon class name.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "Return a dictionary of icons for the specified category. Then icon is returned as a string containing the font set class",
+			"params": {
+				"category": "<enum>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.settings.geticons",
+		"description": "Return a dictionary of icons for the specified category. The icon is return as a SVG sprite name.",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.settings.geticons",
+			"params": {
+				"category": "<enum>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.settings.keys",
+		"description": "Return a list of all the keys",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.settings.keys",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.settings.list",
+		"description": "Return a list of key/value pairs of all the settings",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.settings.list",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.settings.remove",
+		"description": "Remove the specfied key and value",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.settings.remove",
+			"params": {
+				"key": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.settings.set",
+		"description": "Set the key to the specified value",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.settings.set",
+			"params": {
+				"key": "<string>",
+				"value": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.togglelensmenu",
+		"description": "Toggle lens menu on or off",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.togglelensmenu",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.togglemenu",
+		"description": "Toggle menu on/off",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.togglemenu",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.toggleosd",
+		"description": "Toggle on screen display on or off",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.toggleosd",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.togglepatternmenu",
+		"description": "Toggle the pattern menu on or off",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.togglepatternmenu",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.togglesourcemenu",
+		"description": "Toggle the source menu on or off",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.togglesourcemenu",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.togglestealthmode",
+		"description": "[DEPRECATED]",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.togglestealthmode",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "ui.touchscreen.tapped",
+		"description": "Called from touchpanel when the touchpanel is in Test mode",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "ui.touchscreen.tapped",
+			"params": {
+				"x": "<object>",
+				"y": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.admin.changegroup",
+		"description": "Change the user group",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.admin.changegroup",
+			"params": {
+				"newgroup": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.admin.changepassword",
+		"description": "Change the password",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.admin.changepassword",
+			"params": {
+				"newpassword": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.admin.changepincode",
+		"description": "Change the 6-digit PIN code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.admin.changepincode",
+			"params": {
+				"newpincode": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.admin.changepublickey",
+		"description": "Change the public key",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.admin.changepublickey",
+			"params": {
+				"newpublickey": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.admin.changeusername",
+		"description": "Change the username",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.admin.changeusername",
+			"params": {
+				"newusername": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.admin.disable",
+		"description": "Disable the user",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.admin.disable",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.admin.enable",
+		"description": "Enable the user",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.admin.enable",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.admin.invalidatetokens",
+		"description": "Invalidate all tokens",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.admin.invalidatetokens",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.admin.logouteverywhere",
+		"description": "Invalidate all tokens and log out of all active sessions",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.admin.logouteverywhere",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.admin.removepassword",
+		"description": "Remove the password",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.admin.removepassword",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.admin.removepincode",
+		"description": "Remove the 6-digit PIN code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.admin.removepincode",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.currentuser.changegroup",
+		"description": "Change the user group",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.currentuser.changegroup",
+			"params": {
+				"newgroup": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.currentuser.changepassword",
+		"description": "Change the password",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.currentuser.changepassword",
+			"params": {
+				"newpassword": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.currentuser.changepincode",
+		"description": "Change the 6-digit PIN code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.currentuser.changepincode",
+			"params": {
+				"newpincode": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.currentuser.changepublickey",
+		"description": "Change the public key",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.currentuser.changepublickey",
+			"params": {
+				"newpublickey": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.currentuser.changeusername",
+		"description": "Change the username",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.currentuser.changeusername",
+			"params": {
+				"newusername": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.currentuser.disable",
+		"description": "Disable the user",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.currentuser.disable",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.currentuser.enable",
+		"description": "Enable the user",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.currentuser.enable",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.currentuser.invalidatetokens",
+		"description": "Invalidate all tokens",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.currentuser.invalidatetokens",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.currentuser.logouteverywhere",
+		"description": "Invalidate all tokens and log out of all active sessions",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.currentuser.logouteverywhere",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.currentuser.removepassword",
+		"description": "Remove the password",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.currentuser.removepassword",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.currentuser.removepincode",
+		"description": "Remove the 6-digit PIN code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.currentuser.removepincode",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.poweruser.changegroup",
+		"description": "Change the user group",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.poweruser.changegroup",
+			"params": {
+				"newgroup": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.poweruser.changepassword",
+		"description": "Change the password",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.poweruser.changepassword",
+			"params": {
+				"newpassword": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.poweruser.changepincode",
+		"description": "Change the 6-digit PIN code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.poweruser.changepincode",
+			"params": {
+				"newpincode": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.poweruser.changepublickey",
+		"description": "Change the public key",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.poweruser.changepublickey",
+			"params": {
+				"newpublickey": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.poweruser.changeusername",
+		"description": "Change the username",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.poweruser.changeusername",
+			"params": {
+				"newusername": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.poweruser.disable",
+		"description": "Disable the user",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.poweruser.disable",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.poweruser.enable",
+		"description": "Enable the user",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.poweruser.enable",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.poweruser.invalidatetokens",
+		"description": "Invalidate all tokens",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.poweruser.invalidatetokens",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.poweruser.logouteverywhere",
+		"description": "Invalidate all tokens and log out of all active sessions",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.poweruser.logouteverywhere",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.poweruser.removepassword",
+		"description": "Remove the password",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.poweruser.removepassword",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.poweruser.removepincode",
+		"description": "Remove the 6-digit PIN code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.poweruser.removepincode",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.resetadministrator",
+		"description": "Reset the administrator account using the response provided by barco",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.resetadministrator",
+			"params": {
+				"response": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.testuser.changegroup",
+		"description": "Change the user group",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.testuser.changegroup",
+			"params": {
+				"newgroup": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.testuser.changepassword",
+		"description": "Change the password",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.testuser.changepassword",
+			"params": {
+				"newpassword": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.testuser.changepincode",
+		"description": "Change the 6-digit PIN code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.testuser.changepincode",
+			"params": {
+				"newpincode": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.testuser.changepublickey",
+		"description": "Change the public key",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.testuser.changepublickey",
+			"params": {
+				"newpublickey": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.testuser.changeusername",
+		"description": "Change the username",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.testuser.changeusername",
+			"params": {
+				"newusername": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.testuser.disable",
+		"description": "Disable the user",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.testuser.disable",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.testuser.enable",
+		"description": "Enable the user",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.testuser.enable",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.testuser.invalidatetokens",
+		"description": "Invalidate all tokens",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.testuser.invalidatetokens",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.testuser.logouteverywhere",
+		"description": "Invalidate all tokens and log out of all active sessions",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.testuser.logouteverywhere",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.testuser.removepassword",
+		"description": "Remove the password",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.testuser.removepassword",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.testuser.removepincode",
+		"description": "Remove the 6-digit PIN code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.testuser.removepincode",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.user.changegroup",
+		"description": "Change the user group",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.user.changegroup",
+			"params": {
+				"newgroup": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.user.changepassword",
+		"description": "Change the password",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.user.changepassword",
+			"params": {
+				"newpassword": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.user.changepincode",
+		"description": "Change the 6-digit PIN code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.user.changepincode",
+			"params": {
+				"newpincode": "<object>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.user.changepublickey",
+		"description": "Change the public key",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.user.changepublickey",
+			"params": {
+				"newpublickey": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.user.changeusername",
+		"description": "Change the username",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.user.changeusername",
+			"params": {
+				"newusername": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.user.disable",
+		"description": "Disable the user",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.user.disable",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.user.enable",
+		"description": "Enable the user",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.user.enable",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.user.invalidatetokens",
+		"description": "Invalidate all tokens",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.user.invalidatetokens",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.user.logouteverywhere",
+		"description": "Invalidate all tokens and log out of all active sessions",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.user.logouteverywhere",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.user.removepassword",
+		"description": "Remove the password",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.user.removepassword",
+			"params": {},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "user.user.removepincode",
+		"description": "Remove the 6-digit PIN code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "user.user.removepincode",
+			"params": {},
+			"id": "<number|string>"
+		}
+	}
+]
