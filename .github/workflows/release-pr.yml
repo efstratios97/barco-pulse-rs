@@ -29,8 +29,13 @@ jobs:
       - name: Install cargo-release
         run: cargo install cargo-release
 
+      - name: Configure git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
       - name: Bump version only
-        run: cargo release ${{ inputs.level }} --execute --no-confirm --no-publish --no-verify --no-push --no-tag
+        run: cargo release ${{ inputs.level }} --execute --no-confirm --no-verify --no-publish --no-verify --no-push --no-tag
 
       - name: Read version
         id: version
