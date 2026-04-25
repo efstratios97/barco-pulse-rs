@@ -31,8 +31,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
 
       - name: Bump version only
         run: cargo release ${{ inputs.level }} --execute --no-confirm --no-publish --no-verify --no-push --no-tag
