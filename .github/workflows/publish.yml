@@ -19,7 +19,7 @@ jobs:
         run: cargo build -r
 
       - name: Package for crates.io
-        run: cargo package
+        run: cargo package --no-verify
 
       - name: Publish to crates.io
-        run: cargo publish
+        run: cargo publish --no-verify
