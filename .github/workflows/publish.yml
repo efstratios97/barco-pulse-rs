@@ -1,0 +1,61 @@
+name: Publish
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: >
+      github.event.pull_request.merged == true &&
+      startsWith(github.event.pull_request.title, 'release: v')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Read version
+        id: version
+        run: |
+          VERSION=$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[0].version')
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Verify PR title matches Cargo.toml version
+        run: |
+          EXPECTED="release: v${{ steps.version.outputs.version }}"
+          ACTUAL="${{ github.event.pull_request.title }}"
+
+          if [ "$ACTUAL" != "$EXPECTED" ]; then
+            echo "PR title does not match Cargo.toml version"
+            echo "Expected: $EXPECTED"
+            echo "Actual:   $ACTUAL"
+            exit 1
+          fi
+
+      - name: Create and push tag
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          TAG="v${{ steps.version.outputs.version }}"
+
+          if git ls-remote --tags origin "$TAG" | grep "$TAG"; then
+            echo "Tag $TAG already exists"
+            exit 1
+          fi
+
+          git tag "$TAG"
+          git push origin "$TAG"
+
+      - name: Publish to crates.io
+        env:
+          CARGO_REGISTRY_TOKEN: ${{ secrets.CRATES_IO }}
+        run: cargo publish --no-verify

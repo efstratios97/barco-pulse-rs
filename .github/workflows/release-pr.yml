@@ -1,0 +1,48 @@
+name: Prepare Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      level:
+        description: "Version bump"
+        required: true
+        default: "patch"
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-pr:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: dtolnay/rust-toolchain@stable
+
+      - name: Install cargo-release
+        run: cargo install cargo-release
+
+      - name: Bump version only
+        run: cargo release ${{ inputs.level }} --execute --no-confirm --no-publish --no-verify --no-push --no-tag
+
+      - name: Read version
+        id: version
+        run: |
+          VERSION=$(cargo metadata --no-deps --format-version 1 | jq -r '.packages[0].version')
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Create release PR
+        uses: peter-evans/create-pull-request@v8
+        with:
+          branch: release/v${{ steps.version.outputs.version }}
+          title: "release: v${{ steps.version.outputs.version }}"
+          commit-message: "release: v${{ steps.version.outputs.version }}"
+          body: "Release v${{ steps.version.outputs.version }}"
+          labels: release
