@@ -35,7 +35,7 @@ jobs:
           git config user.email "github-actions@github.com"
 
       - name: Bump version only
-        run: cargo release ${{ inputs.level }} --execute --no-confirm --no-verify --no-publish --no-verify --no-push --no-tag
+        run: cargo release ${{ inputs.level }} --execute --no-confirm --no-publish --no-verify --no-push --no-tag
 
       - name: Read version
         id: version
