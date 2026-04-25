@@ -34,9 +34,6 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
 
-      - name: Update lockfile
-        run: cargo update -w
-
       - name: Bump version only
         run: cargo release ${{ inputs.level }} --execute --no-confirm --no-publish --no-verify --no-push --no-tag
 
