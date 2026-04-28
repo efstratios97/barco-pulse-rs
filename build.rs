@@ -159,6 +159,18 @@ fn create_method_fns(methods: Vec<Method>) {
     let mut generated_code = String::from(HEADER);
     // init code
     generated_code.push_str(COMMON_INIT_CODE);
+    // generic_call
+    generated_code.push_str(
+        "/// custom pulse method api call
+pub async fn custom_method_call(address: &str, method_name: &str, params: std::collections::HashMap<String, String>) -> APICallResult {{
+let client = reqwest::Client::new();
+    let payload = serde_json::json!({\"jsonrpc\":2.0,\"method\":method_name,\"id\":method_name,\"params\":params}).to_string();
+    let res = client.post(address).body(payload).send().await?;
+    let res_body = res.text().await?;
+    let res: APICallResponse = serde_json::from_str(&res_body)?;
+    Ok(res)
+}}\n"
+    );
     // Iterate over all properties
     methods
         .iter()
