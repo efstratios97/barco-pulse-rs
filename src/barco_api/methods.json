@@ -60,6 +60,45 @@
 		}
 	},
 	{
+		"method": "login_basic",
+		"description": "Login using username and password (set token true to receive a token)",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "login",
+			"params": {
+				"username": "<string>",
+				"password": "<string>",
+				"token": "<bool>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "login_token",
+		"description": "Login using token",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "login",
+			"params": {
+				"token": "<string>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
+		"method": "login_code",
+		"description": "Login using code",
+		"request": {
+			"jsonrpc": "2.0",
+			"method": "login",
+			"params": {
+				"code": "<string>",
+				"token": "<bool>"
+			},
+			"id": "<number|string>"
+		}
+	},
+	{
 		"method": "logout",
 		"description": "De-authenticate",
 		"request": {
