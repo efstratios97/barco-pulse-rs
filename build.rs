@@ -1,6 +1,5 @@
 use std::path::Path;
-use std::process::exit;
-use std::{ fs::{ File, write }, io::BufReader };
+use std::{ fs::{ File, write, metadata }, io::BufReader };
 use serde::de::DeserializeOwned;
 
 // Iclude property models to map the json
@@ -8,7 +7,7 @@ include!("./src/models/common.rs");
 include!("./src/models/property.rs");
 include!("./src/models/method.rs");
 
-type ApiFilesResult<T> = Result<Vec<T>, Box<dyn std::error::Error>>;
+pub type ApiFilesResult<T> = Result<Vec<T>, Box<dyn std::error::Error>>;
 
 ///////////////////////////////////////////////////////////////////////////
 /// COMMON ////////////////////////////////////////////////////////////////
@@ -86,8 +85,15 @@ fn read_json_file<T>(file_path: &str) -> ApiFilesResult<T> where T: DeserializeO
 
 fn write_to_file(code: String, file_path: &str) {
     let dest_path = Path::new(file_path);
+    let should_write =
+        !dest_path.exists() ||
+        metadata(dest_path)
+            .map(|m| m.len() == 0)
+            .unwrap_or(false);
 
-    write(&dest_path, code).unwrap();
+    if should_write {
+        write(dest_path, code).unwrap();
+    }
 }
 
 fn match_set_value_type(rpc_data: &Option<JsonRpcPayload>, param_key: &str) -> Option<String> {
@@ -107,6 +113,13 @@ fn match_set_value_type(rpc_data: &Option<JsonRpcPayload>, param_key: &str) -> O
             _ => Some(String::from("String")),
         }
     }
+}
+
+fn create_lib_rs_file() {
+    let generated_code = String::from("pub mod method_api;
+pub mod property_api;
+");
+    write_to_file(generated_code, "./src/lib.rs");
 }
 
 ///////////////////////////////////////////////////////////////////////////
@@ -317,15 +330,15 @@ pub async fn {} -> APICallResult {{
 fn main() {
     let file_path_properties = "./src/barco_api/properties.json";
     let properties: Vec<Property> = read_json_file(file_path_properties).unwrap_or_else(|err| {
-        println!("{:?}", err);
-        exit(1);
+        panic!("{:?}", err);
     });
     create_property_fns(properties);
 
     let file_path_methods = "./src/barco_api/methods.json";
     let methods: Vec<Method> = read_json_file(file_path_methods).unwrap_or_else(|err| {
-        println!("{:?}", err);
-        exit(1);
+        panic!("{:?}", err);
     });
     create_method_fns(methods);
+
+    create_lib_rs_file();
 }
