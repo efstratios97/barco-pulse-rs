@@ -1,6 +1,6 @@
 [package]
 name = "barco-pulse-rs"
-version = "0.1.5"
+version = "0.1.2"
 edition = "2024"
 license = "MPL-2.0"
 description = "Rust client for Barco Pulse projector JSON-RPC API"
@@ -13,10 +13,6 @@ categories = ["api-bindings", "network-programming"]
 serde_json = "1.0.149"
 serde = { version = "1", features = ["derive"] }
 tokio = { version = "1.50.0", features = ["full"] }
-bon = "3.9.1"
-getset = "0.1.6"
-reqwest = "0.13.2"
-serde_yaml = "0.9.34+deprecated"
 
 [build-dependencies]
 serde_json = "1.0.149"
